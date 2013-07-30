@@ -1,0 +1,52 @@
+Source: ftcsim
+Standards-Version: 3.9.3
+Maintainer: Nate Koenig <nate@osrfoundation.org>
+Section: devel
+Priority: extra
+Build-Depends: cmake,
+ debhelper (>= 7.0.50~),
+ gazebo (>= 1.9.0),
+ ros-fuerte-urdfdom,
+ ros-fuerte-console-bridge,
+ ros-fuerte-std-msgs,
+ ros-fuerte-common-msgs,
+ ros-fuerte-image-common,
+ ros-fuerte-geometry,
+ ros-fuerte-geometry-experimental,
+ ros-fuerte-robot-model-visualization,
+ ros-fuerte-image-pipeline,
+ ros-fuerte-image-transport-plugins
+Homepage: http://osrfoundation.org
+
+Package: ftcsim
+Architecture: any
+Section: devel
+Priority: extra
+Depends: gazebo (>= 1.9.0),
+ ros-fuerte-urdfdom,
+ ros-fuerte-console-bridge,
+ ros-fuerte-std-msgs,
+ ros-fuerte-common-msgs,
+ ros-fuerte-image-common,
+ ros-fuerte-geometry,
+ ros-fuerte-geometry-experimental,
+ ros-fuerte-robot-model-visualization,
+ ros-fuerte-image-pipeline,
+ ros-fuerte-image-transport-plugins,
+ ${misc:Depends}
+Conflicts: ftcsim-prerelease,
+ ftcsim-nightly
+Description: FIRST simulation
+ Gazebo worlds, and models to simulation the FIRST competition.
+Homepage: http://osrfoundation.org
+
+Package: ftcsim-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: ftcsim (= ${binary:Version}),
+ ${misc:Depends}
+Conflicts: ftcsim-prerelease-dbg, 
+ ftcsim-nightly-dbg
+Description: debugging symbols for ftcsim
+ This package contains the debugging symbols for FIRST simulator.
