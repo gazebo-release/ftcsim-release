@@ -1,5 +1,5 @@
-ftcsim (0.0.1-1~quantal) quantal; urgency=high
+ftcsim (0.1.0-1~quantal) quantal; urgency=high
  
-  * Release 0.0.1-1
+  * Release 0.1.0-1
  
- -- Nate Koenig <nate@osrfoundation.org>  Mon, 29 Jul 2013 16:45:00 -0700
+ -- Nate Koenig <nate@osrfoundation.org>  Tue, 30 Jul 2013 16:45:00 -0700
