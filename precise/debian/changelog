@@ -1,3 +1,9 @@
+ftcsim (0.1.1-2~precise) precise; urgency=high
+ 
+  * Release 0.1.1-2
+ 
+ -- Nate Koenig <nate@osrfoundation.org>  Thu, 01 Aug 2013 16:45:00 -0700
+ 
 ftcsim (0.1.1-1~precise) precise; urgency=high
  
   * Release 0.1.1-1

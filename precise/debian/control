@@ -18,7 +18,8 @@ Build-Depends: cmake,
  ros-groovy-image-pipeline,
  ros-groovy-image-transport-plugins,
  ros-groovy-image-view,
- ros-groovy-joy
+ ros-groovy-joy,
+ ros-groovy-roslaunch
 Homepage: http://osrfoundation.org
 
 Package: ftcsim
@@ -39,6 +40,7 @@ Depends: gazebo (>= 1.9.0),
  ros-groovy-image-transport-plugins,
  ros-groovy-image-view,
  ros-groovy-joy,
+ ros-groovy-roslaunch,
  ${misc:Depends}
 Conflicts: ftcsim-prerelease,
  ftcsim-nightly
