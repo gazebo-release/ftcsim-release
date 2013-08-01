@@ -15,20 +15,22 @@ export DH_OPTIONS=-v
 
 override_dh_auto_configure:
 	# Pull in ROS and Gazebo configuration
-	if [ -f "/opt/ros/fuerte/setup.sh" ]; then . "/opt/ros/fuerte/setup.sh"; fi && \
-	if [ -f "/usr/share/gazebo/setup.sh" ]; then . "/usr/share/gazebo/setup.sh"; fi && \
-	dh_auto_configure -- -DCMAKE_BUILD_TYPE=RelWithDebInfo
+	. "/opt/ros/groovy/setup.sh" && \
+	. "/usr/share/gazebo/setup.sh" && \
+	dh_auto_configure -- \
+		-DCMAKE_BUILD_TYPE=RelWithDebInfo \
+		-DCATKIN_BUILD_BINARY_PACKAGE="1"
 
 override_dh_auto_build:
-	# Pull in ROS and Gazebo configuration
-	if [ -f "/opt/ros/fuerte/setup.sh" ]; then . "/opt/ros/fuerte/setup.sh"; fi && \
-	if [ -f "/usr/share/gazebo/setup.sh" ]; then . "/usr/share/gazebo/setup.sh"; fi && \
+	. "/opt/ros/groovy/setup.sh" && \
+	. "/usr/share/gazebo/setup.sh" && \
+	rosdep update && \
 	dh_auto_build -- VERBOSE=1
 
 override_dh_shlibdeps:
 	# Pull in ROS and Gazebo configuration
-	if [ -f "/opt/ros/fuerte/setup.sh" ]; then . "/opt/ros/fuerte/setup.sh"; fi && \
-	if [ -f "/usr/share/gazebo/setup.sh" ]; then . "/usr/share/gazebo/setup.sh"; fi && \
+	. "/opt/ros/groovy/setup.sh" && \
+	. "/usr/share/gazebo/setup.sh" && \
 	dh_shlibdeps
 
 override_dh_auto_install:
